@@ -1,10 +1,7 @@
 const navLinks = [
-    { label: "Store" },
-    { label: "Mac" },
-    { label: "iPhone" },
-    { label: "Watch" },
-    { label: "Vision" },
-    { label: "AirPods" },
+    { href: "#missao", label: "Missão" },
+    { href: "#eventos", label: "Eventos" },
+    { href: "#membros", label: "Membros" },
 ];
 
 const noChangeParts = [

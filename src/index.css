@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* --- Fontes --- */
 @font-face {
   font-family: "Regular";
   src: url("/fonts/regular.otf");
@@ -20,6 +21,7 @@
   src: url("/fonts/bold.otf");
 }
 
+/* --- Reset Global --- */
 * {
   scrollbar-color: var(--color-dark-100) var(--color-black);
 }
@@ -34,17 +36,20 @@
   );
 }
 
+/* --- Configuração do Tema (Tailwind v4) --- */
 @theme {
   --font-regular: "Regular";
   --font-medium: "Medium";
   --font-semibold: "SemiBold";
   --font-bold: "Bold";
+
   --color-primary: #0071e3;
   --color-dark-100: #86868b;
   --color-dark-200: #2e2e30;
   --color-light-100: #adb5bd;
 }
 
+/* --- Estilos Base --- */
 html {
   width: 100vw;
   overflow-x: hidden;
@@ -59,6 +64,7 @@ body {
   font-family: var(--font-semibold);
 }
 
+/* --- Utilitários Personalizados (@utility) --- */
 @utility flex-center {
   @apply flex items-center justify-center;
 }
@@ -87,7 +93,10 @@ body {
   @apply font-medium text-xs;
 }
 
+/* --- Componentes --- */
 @layer components {
+  
+  /* Header */
   header {
     @apply w-screen fixed top-0 left-0 z-50 flex-center bg-black min-h-[7vh];
 
@@ -112,6 +121,7 @@ body {
     }
   }
 
+  /* Hero Section */
   #hero {
     @apply h-fit lg:h-[80vh] col-center mt-40 lg:mt-20 2xl:mt-[7vh];
 
@@ -140,6 +150,7 @@ body {
     }
   }
 
+  /* Product Viewer (3D/Canvas Wrapper) */
   #product-viewer {
     @apply container relative min-h-[93vh] mx-auto px-5 2xl:px-0 mt-40;
 
@@ -180,6 +191,7 @@ body {
     }
   }
 
+  /* Showcase Section */
   #showcase {
     @apply relative;
 
@@ -223,6 +235,7 @@ body {
     }
   }
 
+  /* Performance Section */
   #performance {
     @apply w-dvw h-full overflow-hidden pt-20 lg:pt-20 flex flex-col items-center relative;
 
@@ -275,6 +288,7 @@ body {
     }
   }
 
+  /* Features Section */
   #features {
     @apply pt-40 relative;
 
@@ -295,6 +309,7 @@ body {
     }
   }
 
+  /* Highlights Section */
   #highlights {
     @apply container mx-auto lg:py-40 max-lg:px-5;
 
@@ -339,21 +354,23 @@ body {
         p {
           @apply font-semibold text-4xl max-w-2xs;
         }
+
         .apple-gradient {
           @apply p-10 rounded-3xl flex items-center gap-7 relative;
 
           background: #1d1d1f;
-          background-clip: padding-box; /* !important */
-          border: 3px solid transparent; /* !important */
+          background-clip: padding-box;
+          border: 3px solid transparent;
 
-          ::before {
+          /* Pseudo-element for Gradient Border */
+          &::before {
             content: "";
             pointer-events: none;
             position: absolute;
             inset: 0px;
             z-index: -1;
-            margin: -5px; /* !important */
-            border-radius: 24px; /* !important */
+            margin: -5px;
+            border-radius: 24px;
             background: linear-gradient(
               91deg,
               #0096ff 0%,
@@ -399,6 +416,7 @@ body {
     }
   }
 
+  /* Footer */
   footer {
     @apply container mx-auto py-7 max-lg:px-5;
 
