@@ -14,7 +14,7 @@ Make sure you have the following installed on your machine:
 
 ```bash
 git clone (https://github.com/mclJohn/ProjetoSolanaSuperTeamBr)
-cd gsap_macbook_landing
+cd solana superteam
 ```
 
 **Installation**
