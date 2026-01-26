@@ -92,7 +92,7 @@ const Hero = () => {
             
             {/* Imagem Placeholder (Solana 3D) */}
             <img 
-              src="https://cdn3d.iconscout.com/3d/premium/thumb/solana-coin-4991623-4156997.png" 
+              src="solanaLogocircular.png" 
               alt="Elemento 3D Solana Brasil" 
               className="w-full h-full object-contain drop-shadow-[0_0_50px_rgba(255,210,63,0.3)] filter hover:brightness-110 transition duration-500"
             />

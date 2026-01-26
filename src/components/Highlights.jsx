@@ -5,11 +5,11 @@ import { Twitter, Heart, MessageCircle, Repeat2, ExternalLink } from "lucide-rea
 // --- 1. DADOS MOCKADOS: PARCEIROS ---
 const partners = [
   { name: "Solana Foundation", logo: "https://upload.wikimedia.org/wikipedia/en/b/b9/Solana_logo.png" },
-  { name: "Metaplex", logo: "https://seeklogo.com/images/M/metaplex-logo-5660E18536-seeklogo.com.png" },
-  { name: "Phantom", logo: "https://cryptologos.cc/logos/phantom-phantom-logo.png" },
-  { name: "Drift Protocol", logo: "https://cryptologos.cc/logos/drift-drift-logo.png" },
-  { name: "Jupiter", logo: "https://iconape.com/wp-content/files/dy/331393/png/331393.png" },
-  { name: "Magic Eden", logo: "https://cryptologos.cc/logos/magic-eden-me-logo.png" },
+  { name: "Metaplex", logo: "https://miro.medium.com/v2/resize:fit:2400/1*n7hQXmgsfpxFDQe8kbuN4g.png" },
+  { name: "Phantom", logo: "https://coinlaunch.space/media/images/4/8/5/0/4850.sp3ow1.192x192.png" },
+  { name: "Drift Protocol", logo: "https://assets-validator.s3.eu-west-1.amazonaws.com/Drift+Logo+Circular.png" },
+  { name: "Jupiter", logo: "https://cryptologos.cc/logos/jupiter-ag-jup-logo.png" },
+  { name: "Magic Eden", logo: "https://ord.cdn.magiceden.dev/static_resources/ME+logo.png" },
 ];
 
 // --- 2. DADOS MOCKADOS: TWEETS (WALL OF LOVE) ---
