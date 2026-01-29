@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Twitter, Linkedin, Code2, PenTool, TrendingUp, Users } from "lucide-react";
+import { Link } from "react-router-dom"; // 1. IMPORTANTE: Importar o Link
 
-// --- DADOS MOCKADOS DOS MEMBROS (Baseado na referência visual) ---
+// --- DADOS MOCKADOS DOS MEMBROS ---
 const members = [
   {
     id: 1,
@@ -127,7 +128,7 @@ const Members = () => {
       {/* --- CARROSSEL INFINITO (MARQUEE) --- */}
       <div className="relative w-full overflow-hidden py-10">
         
-        {/* Gradientes nas laterais para suavizar o corte */}
+        {/* Gradientes nas laterais */}
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#1b231d] to-transparent z-20 pointer-events-none"></div>
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#1b231d] to-transparent z-20 pointer-events-none"></div>
 
@@ -143,7 +144,7 @@ const Members = () => {
             ))}
           </motion.div>
 
-          {/* Loop 2 (Duplicado para efeito infinito) */}
+          {/* Loop 2 */}
           <motion.div 
             className="flex"
             animate={{ x: ["0%", "-100%"] }}
@@ -153,7 +154,7 @@ const Members = () => {
               <MemberCard key={`${member.id}-duplicate`} member={member} />
             ))}
           </motion.div>
-           {/* Loop 3 (Triplicado para telas largas) */}
+           {/* Loop 3 */}
            <motion.div 
             className="flex"
             animate={{ x: ["0%", "-100%"] }}
@@ -168,13 +169,14 @@ const Members = () => {
 
       {/* CTA Final */}
       <div className="text-center mt-12 relative z-10">
-        <a 
-            href="#"
+        {/* 2. ALTERAÇÃO AQUI: Trocamos o 'a href' pelo 'Link to' */}
+        <Link 
+            to="/membros"
             className="inline-flex items-center gap-2 text-[#f7eacb] border border-[#f7eacb]/30 px-8 py-3 rounded-full hover:bg-[#f7eacb] hover:text-[#1b231d] transition-all duration-300 font-bold"
         >
             <Users size={18} />
             Ver Todos os Membros
-        </a>
+        </Link>
       </div>
 
     </section>
