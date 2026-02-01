@@ -120,7 +120,7 @@ const Showcase = () => {
             >
                 <video 
                     ref={videoRef}
-                    src="/videos/superteambrasil.mp4" 
+                    src="/videos/superteamVideo.mp4" 
                     loop 
                     muted={isMuted} 
                     autoPlay 

@@ -2,7 +2,7 @@ import React, { useLayoutEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 // Componentes
-import NavBar from "./components/NavBar.jsx"; // NavBar importada aqui
+import NavBar from "./components/NavBar.jsx";
 import Hero from "./components/Hero.jsx";
 import ProductViewer from "./components/ProductViewer.jsx";
 import Showcase from "./components/Showcase.jsx";
@@ -10,7 +10,7 @@ import Performance from "./components/Performance.jsx";
 import Features from "./components/Features.jsx";
 import Highlights from "./components/Highlights.jsx";
 import Question from "./components/Question.jsx";
-import Footer from "./components/Footer.jsx";
+import Footer from "./components/Footer.jsx"; // Footer importado
 import MembersPage from "./components/MembersPage.jsx";
 
 import gsap from 'gsap';
@@ -32,11 +32,10 @@ const App = () => {
             <ScrollToTop />
             
             <main>
-                {/* --- 1. NAVBAR FIXA EM TODAS AS PÁGINAS --- */}
-                {/* Colocando ela aqui fora das Routes, ela aparece sempre */}
+                {/* --- 1. NAVBAR (Fixa em todas as páginas) --- */}
                 <NavBar />
 
-                {/* --- 2. CONTEÚDO QUE MUDA --- */}
+                {/* --- 2. CONTEÚDO (Muda conforme a rota) --- */}
                 <Routes>
                     
                     {/* ROTA DA HOME */}
@@ -49,15 +48,18 @@ const App = () => {
                             <Features />
                             <Highlights />
                             <Question /> 
-                            <Footer />
+                            {/* Footer foi removido daqui */}
                         </>
                     } />
 
                     {/* ROTA DE MEMBROS */}
-                    {/* Não precisa colocar NavBar aqui dentro, pois já está lá fora */}
                     <Route path="/membros" element={<MembersPage />} />
 
                 </Routes>
+
+                {/* --- 3. FOOTER (Fixo em todas as páginas) --- */}
+                {/* Agora ele está fora das Routes, então aparece na Home E em Membros */}
+                <Footer />
             </main>
         </BrowserRouter>
     );
